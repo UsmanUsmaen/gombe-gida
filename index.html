@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECTOPI | Product & Technology Studio</title>
+    <meta
+      name="description"
+      content="TECTOPI.COM app prototype for showcasing services, projects, and collecting client enquiries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#" class="brand" aria-label="TECTOPI home">
+          <span class="brand-mark">T</span>
+          <span class="brand-text">TECTOPI</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Build with confidence</p>
+            <h1>Digital products engineered for growth.</h1>
+            <p class="lead">
+              TECTOPI partners with startups and teams to design, build, and
+              launch modern web and mobile experiences.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#contact">Start a project</a>
+              <a class="btn btn-secondary" href="#projects">View work</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Key impact metrics">
+            <h2>Impact Snapshot</h2>
+            <ul>
+              <li><strong>25+</strong> projects delivered</li>
+              <li><strong>99.9%</strong> uptime architecture</li>
+              <li><strong>8 weeks</strong> average MVP launch</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2>Core Services</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Product Strategy</h3>
+              <p>Discovery workshops, requirements shaping, and launch roadmaps.</p>
+            </article>
+            <article class="card">
+              <h3>Web & App Development</h3>
+              <p>Scalable frontend + backend architecture using modern stacks.</p>
+            </article>
+            <article class="card">
+              <h3>Cloud & DevOps</h3>
+              <p>CI/CD automation, monitoring, and infrastructure hardening.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div id="projects-list" class="project-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-wrap">
+          <div>
+            <h2>Let’s build something meaningful</h2>
+            <p>
+              Share your goals and timeline. This prototype includes a client-side
+              form experience with validation and instant feedback.
+            </p>
+          </div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <label>
+              Name
+              <input type="text" id="name" name="name" required minlength="2" />
+            </label>
+            <label>
+              Email
+              <input type="email" id="email" name="email" required />
+            </label>
+            <label>
+              Project brief
+              <textarea id="brief" name="brief" rows="4" required minlength="10"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send enquiry</button>
+            <p id="form-message" class="form-message" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> TECTOPI.COM — Built as an app prototype.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
